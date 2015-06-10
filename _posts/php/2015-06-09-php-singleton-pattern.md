@@ -43,9 +43,9 @@ final class Mysql {
         }
         return static::$_instance [$db];
     }
-    public function __destruct() {
-		$this->_mysqli->close ();
-	}
+    public function getError() {
+    	return $this->_last_error;
+    }
     public function __destruct() {
         $this->_mysqli->close ();
     }

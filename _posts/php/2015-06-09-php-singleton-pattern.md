@@ -50,7 +50,7 @@ final class Mysql {
         $this->_mysqli->close ();
     }
     private function __clone() {
-        throw \Exception;
+        throw new \Exception('class is singleton');
     }
 }
 ```

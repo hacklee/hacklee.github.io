@@ -1,6 +1,6 @@
 ### 我的博客
 
-地址：[http://hacklee.github.io/](http://hacklee.github.io/)
+地址：[http://www.lgy168.xyz/](http://www.lgy168.xyz/)
 
 ### 安装说明
 

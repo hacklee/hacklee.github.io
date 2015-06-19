@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Laravel5.1 中使用版本3.x的Asset管理静态资源
+title: Laravel4.0以上版本使用Asset管理资源
 category: php
-tags: [php , laravel5.1 , framework]
+tags: [php , laravel , framework , Asset]
 description: 在Laravel4.0以上版本使用Asset类管理静态资源
 ---
 
@@ -14,12 +14,12 @@ description: 在Laravel4.0以上版本使用Asset类管理静态资源
 
 ## 实现步骤
 
- - 加载使用Html
- 参考官网文档[laravelcollective/html][3]
++ 加载使用Html
+> 参考官网文档[laravelcollective/html][3]
  
- - 修改asset.php里面的path方法
++ 修改asset.php里面的path方法
  
- ```php
+```php
     public function path($source)
 	{
 	    //根据自己的项目实现
@@ -45,12 +45,12 @@ description: 在Laravel4.0以上版本使用Asset类管理静态资源
 		return \Html::$group($asset['source'], $asset['attributes']);
 	}
 ```
- - 把asset.php放到项目中，注意修改namespace，用composer自动加载
++ 把asset.php放到项目中，注意修改namespace，用composer自动加载
  
- - 在项目的配置文件app.php下的aliases节点加上DI反射配置
-  如:'Asset' 	=> Import\Lib\Assets\Asset::class (此处为实际项目中的Asset类文件路径)
++ 在项目的配置文件app.php下的aliases节点加上DI反射配置
+> 如:'Asset' 	=> Import\Lib\Assets\Asset::class (此处为实际项目中的Asset类文件路径)
 
- - 有了上面的步骤，就可以跟Laravel3一样使用Asset操作了。有点区别就是前面加\或者使用命名空间 use Asset（views页面不用加）;
++ 有了上面的步骤，就可以跟Laravel3一样使用Asset操作了。有点区别就是前面加\或者使用命名空间 use Asset（views页面不用加）;
  
 ```php
 //加载

@@ -14,15 +14,15 @@ description: php策略模式简单介绍与使用
 
 ## 组成部分
 
- 1. 环境类(Context)
+- 环境类(Context)
  
 > 用一个ConcreteStrategy对象来配置,维护一个对Strategy对象的引用。可定义一个接口来让Strategy访问它的数据。
 
- 2. 抽象策略类(Strategy)
+- 抽象策略类(Strategy)
  
 > 定义所有支持的算法的公共接口,Context使用这个接口来调用某ConcreteStrategy定义的算法。
 
- 3. 具体策略类(ConcreteStrategy)
+- 具体策略类(ConcreteStrategy)
  
 > 以Strategy接口实现某具体算法。
 

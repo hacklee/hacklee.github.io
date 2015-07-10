@@ -1,12 +1,12 @@
 ---
 layout: post
-title: linux 安装mongodb
+title: linux 安装MongoDB
 category: tools
-tags: [mongodb , database, linux]
-description: linux 安装mongodb
+tags: [MongoDB , database, linux]
+description: linux 安装MongoDB
 ---
 
-## 源码安装mongodb
+## 源码安装MongoDB
 
 ### 准备工作
 
@@ -14,7 +14,7 @@ description: linux 安装mongodb
 
 > wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.0.4.tgz
 
-- 创建mongodb执行账号
+- 创建MongoDB执行账号
 
 > groupadd mongodb
 useradd mongodb -g mongodb

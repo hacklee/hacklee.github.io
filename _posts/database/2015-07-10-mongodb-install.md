@@ -1,7 +1,7 @@
 ---
 layout: post
 title: linux 安装MongoDB
-category: tools
+category: database
 tags: [MongoDB , database, linux]
 description: linux 安装MongoDB
 ---

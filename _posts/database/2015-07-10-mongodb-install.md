@@ -31,9 +31,13 @@ chown -R mongodb:mongodb /var/mongodb
 mv mongodb-linux-x86_64-3.0.4 mongodb3
 chown -R mongodb:mongodb mongodb3/
 
-## 启动
+## 启动 (dbpath,logpath前面是两个小横杠)
 
 > /opt/soft/mongodb3/bin/mongod --dbpath=/var/mongodb/data --logpath /var/mongodb/logs/log.log -fork
+
+> 使用--auth选项启动mongod进程即可启用认证模式
+/opt/soft/mongodb3/bin/mongod --auth --dbpath=/var/mongodb/data --logpath /var/mongodb/logs/log.log -fork
+**或者修改mongodb.conf，设置auth=true，重启mongod进程**
 
 **看到类似以下信息证明启动成功**
 

@@ -37,7 +37,7 @@ chown -R mongodb:mongodb mongodb3/
 
 > 使用--auth选项启动mongod进程即可启用认证模式
 /opt/soft/mongodb3/bin/mongod --auth --dbpath=/var/mongodb/data --logpath /var/mongodb/logs/log.log --fork
-**或者修改mongodb.conf，设置auth=true，重启mongod进程**
+
 
 **看到类似以下信息证明启动成功**
 
@@ -69,6 +69,16 @@ child process started successfully, parent exiting
 - 开机启动(将上面的启动脚本追加到文件中)
 
 > echo "/opt/soft/mongodb3/bin/mongod --dbpath=/var/mongodb/data --logpath /var/mongodb/logs/log.log --fork" >> /etc/rc.d/rc.local
+
+- 停止数据库实例 (admin)
+
+> db.shutdownServer()
+
+- 使用kill杀掉进程
+
+> kill -2 PID 或 kill -15 PID
+> **不要使用-9，可能会导致数据损坏**
+
 
 ## yum方式安装mongodb
 

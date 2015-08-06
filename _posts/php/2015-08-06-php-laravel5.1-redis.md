@@ -98,7 +98,7 @@ use PRedis;
 > 获取默认实例
 
 ```
-$defaultServer = PRedis::connection(); //等价于$defaultServer = PRedis::connection('default');
+\$defaultServer = PRedis::connection(); //等价于\$defaultServer = PRedis::connection('default');
 ```
 
 > 获取其他特定实例，如果获取server2

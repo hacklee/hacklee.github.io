@@ -28,17 +28,21 @@ description: 使用php-cs-fixer规范php代码
 
 - 为文件增加执行权限
 
->  sudo chmod a+x php-cs-fixer
+>  sudo chmod a+x php-cs-fixer.phar
 
 - 移动文件到PATH目录并重命名为php-cs-fixer
 
-> sudo mv php-cs-fixer /usr/local/bin/php-cs-fixer
+> sudo mv php-cs-fixer.phar /usr/local/bin/php-cs-fixer
 
 #### 更新
 
-- sudo php-cs-fixer self-update
+- php-cs-fixer self-update
 
 #### 使用
+
+- php-cs-fixer fix /要规范的代码目录路径 --level=psr2
+
+> 若不用全局的php-cs-fixer,可以在php-cs-fixer.phar目录按照以下命令执行
 
 - php php-cs-fixer.phar fix /要规范的代码目录路径 --level=psr2
 

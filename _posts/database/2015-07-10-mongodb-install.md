@@ -16,20 +16,26 @@ description: linux 安装MongoDB
 
 - 创建MongoDB执行账号
 
-> groupadd mongodb
+```
+groupadd mongodb
 useradd mongodb -g mongodb
+```
 
 - 创建数据与日志保存目录
 
-> mkdir -p /var/mongodb/data
+```
+mkdir -p /var/mongodb/data
 mkdir -p /var/mongodb/logs
 chown -R mongodb:mongodb /var/mongodb
+```
 
 ## 解压安装
 
-> tar -xzvf mongodb-linux-x86_64-3.0.4.tgz 
+```
+tar -xzvf mongodb-linux-x86_64-3.0.4.tgz 
 mv mongodb-linux-x86_64-3.0.4 mongodb3
 chown -R mongodb:mongodb mongodb3/
+```
 
 ## 启动 (dbpath,logpath前面是两个小横杠)
 
@@ -41,6 +47,12 @@ chown -R mongodb:mongodb mongodb3/
 
 ```
 /opt/soft/mongodb3/bin/mongod --auth --dbpath=/var/mongodb/data --logpath /var/mongodb/logs/log.log --fork
+```
+
+> 使用--storageEngine wiredTiger ，改变mongod的存储引擎为wiredTiger，默认为mmapv1 
+
+```
+/opt/soft/mongodb3/bin/mongod --storageEngine wiredTiger --dbpath=/var/mongodb/data --logpath /var/mongodb/logs/log.log --fork
 ```
 
 **看到类似以下信息证明启动成功**
@@ -55,7 +67,9 @@ child process started successfully, parent exiting
 
 - 进入mongodb的shell模式
 
-> /opt/soft/mongodb3/bin/mongo
+```
+/opt/soft/mongodb3/bin/mongo
+```
 
 - 查看数据库列表
 
@@ -64,9 +78,6 @@ child process started successfully, parent exiting
 - 查看当前版本
 
 > db.version()
-
-![测试图片][1]
-
 
 ## 其他配置事项
 
